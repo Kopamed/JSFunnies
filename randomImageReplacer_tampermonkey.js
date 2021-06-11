@@ -13,16 +13,16 @@
     'use strict';
 
     // Change the defaultWidth and Height variables to whatever default size you want images which don-t have a pre-defined size to be (in pixels)
-    console.log("Waiting for content to load...");
-    console.log("Content loaded successfuly!");
+    console.log("[Tampermonkey][RIM][+] Waiting for content to load...");
+    console.log("[Tampermonkey][RIM][+] Content loaded successfuly!");
     var defaultWidth = 500;
     var defaultHeight = 500;
-    console.log("Looking for images...");
+    console.log("[Tampermonkey][RIM][+] Looking for images...");
     var images = document.getElementsByTagName("img");
-    console.log("Found " + images.length + " images!");
+    console.log("[Tampermonkey][RIM][+] Found " + images.length + " images!");
 
     for(let image = 0; image<images.length; image++) {
-        console.log("Changing image number " + (image+1));
+        console.log("[Tampermonkey][RIM][+] Changing image number " + (image+1));
         var img = images[image];
         let width = img.getAttribute("width");
         let height = img.getAttribute("height");
@@ -33,5 +33,5 @@
         }
     }
 
-    console.log("Successfuly changed " + images.length + " images!")
+    console.log("[Tampermonkey][RIM][+] Successfuly changed " + images.length + " images!")
 })();
