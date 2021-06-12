@@ -4,12 +4,17 @@
 // Check out my other JS ghost modifications at https://kopamed.cf
 
 // Change the defaultWidth and Height variables to whatever default size you want images which don-t have a pre-defined size to be (in pixels)
+console.log("[Tampermonkey][RIM][+] Waiting for content to load...");
+console.log("[Tampermonkey][RIM][+] Content loaded successfuly!");
 var defaultWidth = 500;
 var defaultHeight = 500;
+console.log("[Tampermonkey][RIM][+] Looking for images...");
 var images = document.getElementsByTagName("img");
+console.log("[Tampermonkey][RIM][+] Found " + images.length + " images!");
 
 for(let image = 0; image<images.length; image++) {
-    img = images[image];
+    console.log("[Tampermonkey][RIM][+] Changing image number " + (image+1));
+    var img = images[image];
     let width = img.getAttribute("width");
     let height = img.getAttribute("height");
     if (width != null && height != null) {
@@ -18,3 +23,5 @@ for(let image = 0; image<images.length; image++) {
         img.setAttribute("src", "https://picsum.photos/" + defaultWidth + "/" + defaultHeight);
     }
 }
+
+console.log("[Tampermonkey][RIM][+] Successfuly changed " + images.length + " images!");
