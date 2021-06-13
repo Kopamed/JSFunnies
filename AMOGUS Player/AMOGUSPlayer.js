@@ -9,8 +9,10 @@ for(let link = 0; link < links.length; link++) {
     links[link].setAttribute("target", "_blank")
 }
 
-var links = document.getElementsByTagName("a");
-
-for(let link = 0; link < links.length; link++) {
-	links[link].setAttribute("target", "_blank")
+var elements = document.getElementsByTagName('a');
+for(var i = 0, len = elements.length; i < len; i++) {
+    elements[i].onclick = function () {
+        var audio = new Audio('https://kopamed.cf/AMOGUS.mp3');
+audio.play();
+    }
 }
