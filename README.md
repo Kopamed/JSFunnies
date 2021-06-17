@@ -43,3 +43,6 @@ Known issues:
  3. Create pull request
 
  ight k bye
+
+
+<!--Shit shit shit ignore this lmfao school gay https://www.youtube.com/playlist?list=PLGPwXNGNDIGz2rWqYTSa4zlLCfg0s2Lvx -->
