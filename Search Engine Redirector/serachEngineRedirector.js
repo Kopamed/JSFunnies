@@ -8,6 +8,6 @@ var lookFor = "google";
 var reRoutTo = "https://bing.com";
 var loc = document.location.href;
 
-if(loc.indexOf(lookFor) != -1) {
+if(loc.toLowerCase().indexOf(lookFor) != -1) {
     document.location = reRoutTo;
 }
